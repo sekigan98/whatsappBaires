@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQ9Q1X0DC1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GQ9Q1X0DC1');
+  </script>
+  <title>Más información</title>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '776622518282224');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=776622518282224&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #ece5dd;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 380px;
+      height: 640px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      background: url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg') center center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .header {
+      background-color: #075e54;
+      color: white;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .header .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header .info .name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .header .info .status {
+      font-size: 13px;
+      color: #cfcfcf;
+    }
+
+    .chat-body {
+      flex: 1;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow-y: auto;
+    }
+
+    .message {
+      background-color: #dcf8c6;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      max-width: 80%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .input-box {
+      display: flex;
+      padding: 10px;
+      background-color: #f0f0f0;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .input-box input {
+      flex: 1;
+      padding: 12px 15px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .input-box input:hover {
+      background-color: #e8f5e9;
+    }
+
+    .send-btn {
+      background-color: #25d366;
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+      box-shadow: 0 0 15px #25d366, 0 0 8px #25d366;
+      transition: transform 0.2s ease;
+    }
+
+    .send-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .click-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background: transparent;
+    }
+
+    .invisible-content {
+      display: none;
+    }
+  </style>
+</head>
+<body oncontextmenu="return false" onkeydown="return bloquear(event)" onmousedown="return bloquear(event)">
+  <div class="chat-container">
+    <div class="click-overlay" onclick="redirigirWhatsApp()"></div>
+
+    <div class="header">
+      <img src="https://i.pinimg.com/736x/4d/78/d6/4d78d654861b422f29167f9a51d1b6fb.jpg" alt="Foto perfil" />
+      <div class="info">
+        <span class="name">Bet 300</span>
+        <span class="status">en línea</span>
+      </div>
+    </div>
+
+    <div class="chat-body">
+      <div class="message" id="message"></div>
+    </div>
+
+    <div class="input-box" onclick="redirigirWhatsApp()">
+      <input type="text" placeholder="Escribe un mensaje..." readonly />
+      <button class="send-btn" onclick="redirigirWhatsApp()">➤</button>
+    </div>
+  </div>
+
+  <div class="invisible-content">
+    <h1>Bienvenido a nuestra plataforma de entretenimiento online</h1>
+    <p>Ofrecemos acceso inmediato a herramientas personalizadas para usuarios registrados.</p>
+    <p>Soporte disponible 24/7, sistemas seguros y funciones adaptadas a cada perfil.</p>
+  </div>
+
+  <script>
+    const texto =
+      "¿Queres saber de que se trata? 👋\n\n✅ Acceso inmediato garantizado\n📲 Compatible con cualquier dispositivo\n🕒 Tiempo estimado: menos de 1 minuto\n\n¡Tocá cualquier parte de la pantalla para comenzar!";
+
+    let i = 0;
+    function escribirMensaje() {
+      if (i < texto.length) {
+        const char = texto.charAt(i);
+        if (char === "\n") {
+          document.getElementById("message").innerHTML += "<br>";
+        } else {
+          document.getElementById("message").innerHTML += char;
+        }
+        i++;
+        setTimeout(escribirMensaje, 25);
+      }
+    }
+    escribirMensaje();
+
+  function redirigirWhatsApp() {
+    // Evento para Google Analytics
+    gtag('event', 'click_redireccion_whatsapp', {
+      'event_category': 'Interacción',
+      'event_label': 'Landing Bet300 - Click en chat',
+    });
+
+    // Evento personalizado para Meta Ads
+    fbq('trackCustom', 'InicioConversacion');
+
+    setTimeout(() => {
+      const numeros = [
+        "5491169640722",
+        "5491167901856",
+        "5491169649367",
+        "5491169616587",
+        "5491169606562",
+      ];
+      const numero = numeros[Math.floor(Math.random() * numeros.length)];
+      const mensaje = encodeURIComponent("Hola, vi la promoción y quiero saber más");
+      const utm = "&utm_source=facebook&utm_medium=cpc&utm_campaign=landing_chat";
+      window.location.href = `https://wa.me/${numero}?text=${mensaje}${utm}`;
+    }, 400);
+  }
+
+    function bloquear(e) {
+      const key = e.key || e.which || e.keyCode;
+      if (
+        e.ctrlKey && (key === 'u' || key === 'U' || key === 's' || key === 'S' || key === 'c' || key === 'C') ||
+        key === 123 // F12
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    }
+
+    // Protección adicional anti-inspección y devtools abiertos
+    setInterval(() => {
+      const devtools = new Image();
+      Object.defineProperty(devtools, 'id', {
+        get: function () {
+          window.location.href = 'about:blank';
+        }
+      });
+      console.log('%c', devtools);
+    }, 1000);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
