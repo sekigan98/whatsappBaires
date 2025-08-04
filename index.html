@@ -212,22 +212,22 @@
       'event_label': 'Landing Bet300 - Click en chat',
     });
 
-    setTimeout(() => {
-      const numeros = [
-        "5491168277935",
-        "5491172392226",
-        "5491159060550",
-        "5491130683432",
-        "5491130681094",
-        "5491168277935",
-        "5491130659631",
-        "5491130697719"
-      ];
-      const numero = numeros[Math.floor(Math.random() * numeros.length)];
-      const mensaje = encodeURIComponent("Hola, vi la promoción y quiero saber más");
-      window.location.href = https://wa.me/${numero}?text=${mensaje}${utm};
-    }, 400);
-  }
+setTimeout(() => {
+  const numeros = [
+    "5491168277935",
+    "5491172392226",
+    "5491159060550",
+    "5491130683432",
+    "5491130681094",
+    "5491168277935",
+    "5491130659631",
+    "5491130697719"
+  ];
+  const numero = numeros[Math.floor(Math.random() * numeros.length)];
+  const mensaje = encodeURIComponent("Hola, vi la promoción y quiero saber más");
+  const utm = "&utm_source=facebook&utm_medium=cpc&utm_campaign=landing_chat";
+  window.location.href = `https://wa.me/${numero}?text=${mensaje}${utm}`;
+}, 400);
 
     function bloquear(e) {
       const key = e.key || e.which || e.keyCode;
